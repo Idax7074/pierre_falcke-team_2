@@ -1,7 +1,77 @@
+:root {
+  --white: #ece8d4;
+  --black: #000;
+
+  --primaryBlue: #2d47db;
+  --accentBlue: #e5e9ff;
+
+  --primaryRed: #9f4a42;
+  --accentRed: #7f3e37;
+
+  --primaryYellow: #d8f427;
+  --accentYellow: #eef4c2;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("BebasNeue-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlainReg";
+  src: url("Plain-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlainItalic";
+  src: url("Plain-RegularItalic.woff2") format("woff2");
+  font-display: swap;
+}
+
 body {
-  background-color: var(--gray-12);
+  background-color: var(--white);
+
+  font-family: "PlainReg", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 h1 {
-  color: var(--brown-0);
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  color: var(--white);
+}
+
+h2 {
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  color: var(--primaryBlue);
+}
+
+h3 {
+  font-family: "PlainReg", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  color: var(--white);
+}
+
+h4 {
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  color: var(--primaryBlue);
+}
+
+h5 {
+  font-family: "PlainReg", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }

@@ -64,7 +64,5 @@ h6 {
 h1,
 h2,
 h3 {
-  color: var(--gray-9);
-
   line-height: var(--font-lineheight-0);
 }
