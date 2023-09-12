@@ -10,16 +10,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <HeroText />
   <div class="flex text1">
     <h3>Tidlig interesse</h3>
+    <div class="text">
     <p>Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film. Pierre fortsatte med at fotografere på film op gennem gymnasietiden. </p>
     <br>
     <p>Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans nye stil. </p>
+    </div>
   </div>
   <div class="flex text2">
     <h3>Vil være landets bedste stock-fototgraf</h3>
+    <div class="text">
     <p>Så Pierre gav sig selv en udfordring: At blive landets bedst sælgende stock-fotograf. Pierre lejede et gammelt, billigt erhvervslokale i Ishøj industri, fik fløjet billige skuespillere ind fra Polen og Baltikum, og fotograferede 10 timer om dagen.</p>
     <br>
     <p>Pierres profeti om stock-foto branchen holdt stik. Pierre var allerede en af landets bedst sælgende stock-fotografer, før han blev færdig med studiet på DMJX.</p>
-  <Stock/>
+    </div>
+  <div class="billede">
+    <Stock/>
+    </div>
   </div>
 </BaseLayout>
 
@@ -32,7 +38,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   .text1 {
-    padding-block: var(--size-6);
+    padding-block: var(--size-8);
   }
   .text1 p {
   width: 62rem;
@@ -40,7 +46,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   .text2 {
-    padding-block: var(--size-6);
+    padding-block: var(--size-8);
     background-color: var(--primaryRed);
   }
   .text2 h3{
@@ -50,5 +56,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   .text2 p {
     width: 62rem;
     color: var(--white);
+  }
+
+  .billede {
+    padding-block: var(--size-8);
+  }
+
+  .text {
+    padding-top: var(--size-5);
   }
 </style>
