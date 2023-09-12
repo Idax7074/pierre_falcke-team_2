@@ -62,3 +62,13 @@ h2,
 h3 {
   line-height: var(--font-lineheight-0);
 }
+
+h1 {
+  font-size: 35rem;
+  text-align: center;
+  margin-bottom: -5rem;
+}
+
+h2 {
+  font-size: 20rem;
+}
