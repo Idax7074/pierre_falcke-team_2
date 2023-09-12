@@ -2,9 +2,53 @@
 import FotoStil from "../components/FotoStil.astro";
 import Galleri from "../components/Galleri.astro";
 import HeroText from "../components/HeroText.astro";
+import Stock from "../components/Stock.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
   <HeroText />
+  <div class="flex text1">
+    <h3>Tidlig interesse</h3>
+    <p>Pierres interesse for foto startede som ganske ung - som 10-årig fik han sin fars gamle Rollei-kamera, og begyndte at skyde løs. Det var før den digitale revolution, så alle Pierres lommepenge blev brugt på filmruller og fremkaldelse af film. Pierre fortsatte med at fotografere på film op gennem gymnasietiden. </p>
+    <br>
+    <p>Pierre over til digital fotografering i starten af 2000’erne, da han begyndte at studere fotografisk kommunikation på DMJX. Her åbnede en ny verden sig: Reklamefotografering i studie, lyssætning og manipulering af billeder i Photoshop blev hans nye stil. </p>
+  </div>
+  <div class="flex text2">
+    <h3>Vil være landets bedste stock-fototgraf</h3>
+    <p>Så Pierre gav sig selv en udfordring: At blive landets bedst sælgende stock-fotograf. Pierre lejede et gammelt, billigt erhvervslokale i Ishøj industri, fik fløjet billige skuespillere ind fra Polen og Baltikum, og fotograferede 10 timer om dagen.</p>
+    <br>
+    <p>Pierres profeti om stock-foto branchen holdt stik. Pierre var allerede en af landets bedst sælgende stock-fotografer, før han blev færdig med studiet på DMJX.</p>
+  <Stock/>
+  </div>
 </BaseLayout>
+
+<style>
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text1 {
+    padding-block: var(--size-6);
+  }
+  .text1 p {
+  width: 62rem;
+  color: var(--primaryRed);
+  }
+
+  .text2 {
+    padding-block: var(--size-6);
+    background-color: var(--primaryRed);
+  }
+  .text2 h3{
+    color: var(--white);
+  }
+
+  .text2 p {
+    width: 62rem;
+    color: var(--white);
+  }
+</style>
