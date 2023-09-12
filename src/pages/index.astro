@@ -1,13 +1,16 @@
 ---
 import FotoStil from "../components/FotoStil.astro";
 import Galleri from "../components/Galleri.astro";
+import SlideImg from "../components/SlideImg.astro";
 import HeroText from "../components/HeroText.astro";
 import Stock from "../components/Stock.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SlideText from "../components/SlideText.astro";
 ---
 
 <BaseLayout>
   <HeroText />
+  <section>
   <div class="flex text1">
     <h3>Tidlig interesse</h3>
     <div class="text">
@@ -27,6 +30,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <Stock/>
     </div>
   </div>
+  </section>
+<SlideImg/>
+
+
 </BaseLayout>
 
 <style>
