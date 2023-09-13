@@ -84,3 +84,33 @@ h4 {
 p {
   font-size: 1rem;
 }
+
+@media (max-width: 820px) {
+  h1 {
+    font-size: 20rem;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 15rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 8rem;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
