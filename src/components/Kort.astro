@@ -1,0 +1,31 @@
+---
+const { variant } = Astro.props;
+---
+
+<article class={variant}>
+  <div class="kort">
+    <slot />
+  </div>
+</article>
+
+<style>
+  .kort {
+    width: 40rem;
+    height: 20rem;
+  }
+
+  .first {
+    background-color: var(--primaryBlue);
+    color: var(--accentBlue);
+  }
+
+  .second {
+    background-color: var(--primaryRed);
+    color: var(--accentYellow);
+  }
+
+  .third {
+    background-color: var(--primaryYellow);
+    color: var(--accentRed);
+  }
+</style>
