@@ -64,6 +64,9 @@ import Kort from "../components/Kort.astro";
       <p>Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
     </Kort>
   </section>
+  <footer>
+    <h4 class="footer">Digitale designere: Amalie Forum, Amalie Fahlén Hansen, Ida Marie Hjortnæs & Ida Bolette Svale Nielsen.</h4>
+  </footer>
 </BaseLayout>
 
 <style>
@@ -105,5 +108,14 @@ import Kort from "../components/Kort.astro";
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer {
+    color: var(--primaryBlue);
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
   }
 </style>
