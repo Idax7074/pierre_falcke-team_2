@@ -1,0 +1,56 @@
+<div class="progress" id="progress"></div>
+
+<style>
+  .progress {
+    background: var(--primaryYellow);
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 0%;
+    height: 10px;
+    z-index: 1000;
+  }
+
+  /* Other CSS for styling the article */
+
+  article {
+    background-color: #fff;
+    padding: 20px;
+    width: 800px;
+    max-width: 100%;
+    margin: 30px auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  article h1 {
+    text-align: center;
+  }
+
+  article p {
+    line-height: 28px;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<script>
+  let prog = document.getElementById("progress");
+
+  let body = document.body,
+    html = document.documentElement;
+
+  let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+  const setProgress = () => {
+    let scrollFromTop = (document.documentElement.scrollTop || body.scrollTop) + html.clientHeight;
+    let width = (scrollFromTop / height) * 100 + "%";
+
+    console.log("scroll", html.clientHeight, body.scrollTop);
+
+    prog.style.width = width;
+  };
+
+  window.addEventListener("scroll", setProgress);
+
+  setProgress();
+</script>
