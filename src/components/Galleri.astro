@@ -1,2 +1,43 @@
 ---
+import { Image } from "astro:assets";
+import scan from "../assets/images/scan.jpg";
+import tyndfilm from "../assets/images/tynd-film.jpg";
+import sh from "../assets/images/sh.jpg";
+import lomosm from "../assets/images/lomo-smena.jpg";
+import shskidt from "../assets/images/sh-skidt.jpg";
+import glitch from "../assets/images/glitch.jpg";
+import lomo from "../assets/images/lomo.jpg";
+import gammelfilm from "../assets/images/gammel-film.jpg";
+import objektiv from "../assets/images/billigt-objektiv.jpg";
+import canon from "../assets/images/canon-eos-300-gammel-film.jpg";
+import lightleaks from "../assets/images/light-leaks.jpg";
 ---
+
+<section class="grid">
+  <Image src={scan} format="webp" alt="foto" width="550" height="400" loading="eager" />
+  <Image src={tyndfilm} format="webp" alt="foto" width="550" height="400" loading="eager" />
+  <Image src={sh} format="webp" alt="foto" width="550" height="825" class="longpic" loading="eager" />
+
+  <Image src={lightleaks} format="webp" alt="foto" width="550" height="400" loading="eager" />
+  <Image src={canon} format="webp" alt="foto" width="550" height="400" loading="eager" />
+
+  <Image src={lomosm} format="webp" alt="foto" width="550" height="825" class="longpic" loading="eager" />
+  <Image src={glitch} format="webp" alt="foto" width="550" height="400" loading="eager" />
+  <Image src={objektiv} format="webp" alt="foto" width="550" height="400" loading="eager" />
+
+  <Image src={shskidt} format="webp" alt="foto" width="550" height="825" loading="eager" />
+  <Image src={lomo} format="webp" alt="foto" width="550" height="825" loading="eager" />
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    gap: 1rem;
+  }
+
+  .longpic {
+    grid-row: span 2;
+  }
+</style>
