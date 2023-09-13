@@ -44,25 +44,32 @@ import Kort from "../components/Kort.astro";
   </section>
   <FotoStil />
   <SlideImg />
-  <section class="grid">
-    <Kort variant="first">
-      <h4>Analog fotografering</h4>
-      <p>
-        Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes at film-fotografering er mere ægte
-        har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.
-      </p>
-    </Kort>
-    <Kort variant="second">
-      <h4>Lomografi</h4>
-      <p>
-        Et lomografi er egentlig bare et fotografi skudt uden videre omtanke, og med noget foto-udstyr af ret alternativ kvalitet. Lomografier skydes ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske lyde lidt
-        anti-fotograf-agtigt. Men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.
-      </p>
-    </Kort>
-    <Kort variant="third">
-      <h4>Glitch art</h4>
-      <p>Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
-    </Kort>
+  <section class="container">
+    <div class="analog">
+      <Kort variant="first">
+        <h4 class="blue">Analog fotografering</h4>
+        <p>
+          Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes at film-fotografering er mere ægte
+          har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.
+        </p>
+      </Kort>
+    </div>
+    <div class="lomografi">
+      <Kort variant="second">
+        <h4 class="yellow">Lomografi</h4>
+        <p>
+          Et lomografi er egentlig bare et fotografi skudt uden videre omtanke, og med noget foto-udstyr af ret alternativ kvalitet. Lomografier skydes ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske lyde lidt
+          anti-fotograf-agtigt. Men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.
+        </p>
+      </Kort>
+    </div>
+    <div class="glitch">
+      <Kort variant="third">
+        <h4 class="red">Glitch art</h4>
+        <p>Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch.</p>
+        <p>Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
+      </Kort>
+    </div>
   </section>
 </BaseLayout>
 
@@ -102,8 +109,48 @@ import Kort from "../components/Kort.astro";
     padding-top: var(--size-5);
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  .container {
+    position: relative;
+    height: 500px;
+  }
+
+  .analog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .lomografi {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+
+  .glitch {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+
+  .blue {
+    color: var(--accentBlue);
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+  }
+
+  .yellow {
+    color: var(--accentYellow);
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+  }
+
+  .red {
+    color: var(--accentRed);
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
   }
 </style>
