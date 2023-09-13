@@ -5,6 +5,8 @@ import HeroText from "../components/HeroText.astro";
 import Stock from "../components/Stock.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Video from "../components/Video.astro";
+import SlideImg from "../components/SlideImg.astro";
+import Kort from "../components/Kort.astro";
 ---
 
 <BaseLayout>
@@ -41,6 +43,27 @@ import Video from "../components/Video.astro";
     </div>
   </section>
   <FotoStil />
+  <SlideImg />
+  <section class="grid">
+    <Kort variant="first">
+      <h4>Analog fotografering</h4>
+      <p>
+        Fotografering med gode, gammeldags filmruller. Analog fotografering stiger for tiden i popularitet, specielt blandt unge, og prisen på filmruller og vintage-kameraer skyder i vejret. Mange fotografer synes at film-fotografering er mere ægte
+        har mere “sjæl.” Analog fotografering er langsommmere, hvert enkelt billede koster penge, og man bliver nødt til at overveje motiv og lys grundigere før der skydes - tænk før du trykker.
+      </p>
+    </Kort>
+    <Kort variant="second">
+      <h4>Lomografi</h4>
+      <p>
+        Et lomografi er egentlig bare et fotografi skudt uden videre omtanke, og med noget foto-udstyr af ret alternativ kvalitet. Lomografier skydes ofte på gode, gammeldags filmruller, men kan også skyde digitalt. Det kan måske lyde lidt
+        anti-fotograf-agtigt. Men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.
+      </p>
+    </Kort>
+    <Kort variant="third">
+      <h4>Glitch art</h4>
+      <p>Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
+    </Kort>
+  </section>
 </BaseLayout>
 
 <style>
@@ -77,5 +100,10 @@ import Video from "../components/Video.astro";
 
   .text {
     padding-top: var(--size-5);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 </style>
