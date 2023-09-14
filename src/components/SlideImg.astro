@@ -3,4 +3,13 @@ import { Image } from "astro:assets";
 import pierre from "../assets/images/pierre1.png";
 ---
 
-<Image src={pierre} format="webp" alt="Stock-foto" width="1700" height="900" loading="eager" />
+<Image src={pierre} class="img" format="webp" alt="Stock-foto" width="1700" height="900" loading="eager" />
+
+<style>
+  @media (max-width: 820px) {
+    .img {
+      width: 820px;
+      height: auto;
+    }
+  }
+</style>
