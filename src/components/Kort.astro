@@ -9,34 +9,81 @@ const { variant } = Astro.props;
 </article>
 
 <style>
-  article {
-    width: 30rem;
-    height: 20rem;
-  }
-  .kort {
-    padding-inline: 2rem;
+  @media (min-width: 821px) {
+    article {
+      width: 30rem;
+      height: 20rem;
+    }
+
+    .kort {
+      padding-inline: 2rem;
+    }
+
+    .first {
+      background-color: var(--primaryBlue);
+      color: var(--accentBlue);
+      border-radius: 1.25rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      transform: rotate(-7.5deg);
+    }
+
+    .second {
+      background-color: var(--primaryRed);
+      color: var(--accentYellow);
+      border-radius: 1.25rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      transform: rotate(2.8deg);
+    }
+
+    .third {
+      background-color: var(--primaryYellow);
+      color: var(--accentRed);
+      border-radius: 1.25rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
   }
 
-  .first {
-    background-color: var(--primaryBlue);
-    color: var(--accentBlue);
-    border-radius: 1.25rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    transform: rotate(-7.5deg);
+  @media (max-width: 820px) {
+    .third {
+      transform: rotate(-3.7deg);
+    }
   }
 
-  .second {
-    background-color: var(--primaryRed);
-    color: var(--accentYellow);
-    border-radius: 1.25rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    transform: rotate(2.8deg);
-  }
+  @media (max-width: 390px) {
+    .third {
+      transform: rotate(0deg);
+    }
+    .first {
+      background-color: var(--primaryBlue);
+      color: var(--accentBlue);
+      padding-block: 1.5rem;
+      padding-inline: 0.8rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-  .third {
-    background-color: var(--primaryYellow);
-    color: var(--accentRed);
-    border-radius: 1.25rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      height: 350px;
+      width: auto;
+    }
+
+    .second {
+      background-color: var(--primaryRed);
+      color: var(--accentYellow);
+      padding-block: 1.5rem;
+      padding-inline: 0.8rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      height: 350px;
+      width: auto;
+    }
+
+    .third {
+      background-color: var(--primaryYellow);
+      color: var(--accentRed);
+      padding-block: 1.5rem;
+      padding-inline: 0.8rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      height: 350px;
+      width: auto;
+    }
   }
 </style>
