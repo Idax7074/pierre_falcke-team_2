@@ -12,8 +12,9 @@ import ProgressBar from "../components/ProgressBar.astro";
 
 <BaseLayout>
   <ProgressBar />
-  <HeroText />
-  <Video />
+  <section class="HeroAnimation">
+    <HeroText />
+  </section>
   <section>
     <div class="flex text1">
       <h3>Tidlig interesse</h3>
@@ -133,17 +134,17 @@ import ProgressBar from "../components/ProgressBar.astro";
     padding-bottom: 1rem;
   }
 
-  .analog {
-    animation: bounce-top 0.9s ease-out both;
+  /* .analog:hover {
+    animation: bounce-top 0.9s 30s ease-out both;
   }
 
-  .lomografi {
-    animation: bounce-top 0.9s ease-out both;
+  .lomografi:hover {
+    animation: bounce-top 0.9s 30s ease-out both;
   }
 
-  .glitch {
-    animation: bounce-top 0.9s ease-out both;
-  }
+  .glitch:hover {
+    animation: bounce-top 0.9s 30s ease-out both;
+  } */
 
   @keyframes bounce-top {
     0% {
@@ -216,8 +217,8 @@ import ProgressBar from "../components/ProgressBar.astro";
 
     .analog {
       position: absolute;
-      top: 20%;
-      left: 35%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
     }
 
@@ -286,4 +287,37 @@ import ProgressBar from "../components/ProgressBar.astro";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".analog", {
+    scrollTrigger: {
+      scrub: true,
+      trigger: ".container",
+      start: "center center",
+      end: "60% 50%",
+      markers: true,
+    },
+    scale: 1.1,
+  });
+
+  gsap.to(".lomografi", {
+    scrollTrigger: {
+      scrub: true,
+      trigger: ".container",
+      start: "center center",
+      end: "60% 50%",
+      markers: true,
+    },
+    scale: 1.1,
+  });
+
+  gsap.to(".glitch", {
+    scrollTrigger: {
+      scrub: true,
+      trigger: ".container",
+      start: "center center",
+      end: "60% 50%",
+      markers: true,
+    },
+    scale: 1.1,
+  });
 </script>

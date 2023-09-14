@@ -65,3 +65,23 @@
     }
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".overskrift", {
+    scrollTrigger: {
+      scrub: true,
+      trigger: ".overskrift",
+      start: "start center",
+      end: "bottom center",
+      // markers: true,
+    },
+
+    x: 1700,
+    duration: 5,
+  });
+</script>
