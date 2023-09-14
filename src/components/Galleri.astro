@@ -14,19 +14,19 @@ import lightleaks from "../assets/images/light-leaks.jpg";
 ---
 
 <section class="grid">
-  <Image src={scan} format="webp" alt="foto" width="550" height="400" loading="eager" />
-  <Image src={tyndfilm} format="webp" alt="foto" width="550" height="400" loading="eager" />
-  <Image src={sh} format="webp" alt="foto" width="550" height="825" class="longpic" loading="eager" />
+  <Image src={scan} format="webp" alt="foto" width="550" class="img" height="400" loading="eager" />
+  <Image src={tyndfilm} format="webp" alt="foto" width="550" height="400" class="img" loading="eager" />
+  <Image src={sh} format="webp" alt="foto" width="550" height="825" class="longpic img" loading="eager" />
 
-  <Image src={lightleaks} format="webp" alt="foto" width="550" height="400" loading="eager" />
-  <Image src={canon} format="webp" alt="foto" width="550" height="400" loading="eager" />
+  <Image src={lightleaks} format="webp" alt="foto" width="550" height="400" class="img" loading="eager" />
+  <Image src={canon} format="webp" alt="foto" width="550" height="400" class="img" loading="eager" />
 
-  <Image src={lomosm} format="webp" alt="foto" width="550" height="825" class="longpic" loading="eager" />
-  <Image src={glitch} format="webp" alt="foto" width="550" height="400" loading="eager" />
-  <Image src={objektiv} format="webp" alt="foto" width="550" height="400" loading="eager" />
+  <Image src={lomosm} format="webp" alt="foto" width="550" height="825" class="longpic img" loading="eager" />
+  <Image src={glitch} format="webp" alt="foto" width="550" height="400" class="img" loading="eager" />
+  <Image src={objektiv} format="webp" alt="foto" width="550" height="400" class="img" loading="eager" />
 
-  <Image src={shskidt} format="webp" alt="foto" width="550" height="825" loading="eager" />
-  <Image src={lomo} format="webp" alt="foto" width="550" height="825" loading="eager" />
+  <Image src={shskidt} format="webp" alt="foto" width="550" height="825" class="img" loading="eager" />
+  <Image src={lomo} format="webp" alt="foto" width="550" height="825" class="img" loading="eager" />
 </section>
 
 <style>
@@ -39,7 +39,43 @@ import lightleaks from "../assets/images/light-leaks.jpg";
     margin-top: 90px;
   }
 
+  .img {
+    height: 100%;
+    width: auto;
+  }
+
+  .grid > *:hover {
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-in-center {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   .longpic {
     grid-row: span 2;
   }
 </style>
+
+<script>
+  //   import { gsap } from "gsap";
+  //   import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   gsap.to(".img", {
+  //     scrollTrigger: {
+  //       trigger: ".grid",
+  //       start: "center top",
+  //       end: "center bottom",
+  //       scrub: true,
+  //       markers: true,
+  //     },
+  //     scale: 1,
+  //   });
+</script>
