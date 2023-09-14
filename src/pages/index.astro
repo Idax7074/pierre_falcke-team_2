@@ -119,21 +119,18 @@ import ProgressBar from "../components/ProgressBar.astro";
     color: var(--accentBlue);
     text-align: center;
     padding-bottom: 1rem;
-    padding-top: 2rem;
   }
 
   .yellow {
     color: var(--accentYellow);
     text-align: center;
     padding-bottom: 1rem;
-    padding-top: 2rem;
   }
 
   .red {
     color: var(--accentRed);
     text-align: center;
     padding-bottom: 1rem;
-    padding-top: 2rem;
   }
 
   .footer {
@@ -144,6 +141,20 @@ import ProgressBar from "../components/ProgressBar.astro";
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     font-size: 1rem;
+  }
+
+  @media (min-width: 821px) {
+    .blue {
+      padding-top: 2rem;
+    }
+
+    .yellow {
+      padding-top: 2rem;
+    }
+
+    .red {
+      padding-top: 2rem;
+    }
   }
 
   @media (min-width: 1425px) {
@@ -196,6 +207,25 @@ import ProgressBar from "../components/ProgressBar.astro";
 
     .glitch {
       margin-left: 10rem;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .text1 p {
+      width: 20rem;
+    }
+
+    .text2 p {
+      width: 20rem;
+    }
+
+    .lomografi {
+      margin-left: 0rem;
+      margin-top: 0rem;
+    }
+
+    .glitch {
+      margin-left: 0rem;
     }
   }
 </style>
