@@ -10,6 +10,18 @@ import PierreFalcke from "./PierreFalcke.astro";
 <style>
   section {
     background-color: var(--black);
-    height: 700px;
+    height: 900px;
+  }
+
+  @media (max-width: 820px) {
+    section {
+      height: 700px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    section {
+      height: 300px;
+    }
   }
 </style>
